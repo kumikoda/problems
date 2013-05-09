@@ -1,4 +1,6 @@
 
+# Given a phone number, enumerate all the possible phone words that can be created
+
 input = [9,5,1,3,2,4,3,7,2,2]
 
 
@@ -43,6 +45,5 @@ map = (char, array) ->
 
 
 
- console.log print([9,5,1])
-
- console.log print([2,2,2])
+console.log print([9,5,1])
+console.log print([2,2,2])
