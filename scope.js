@@ -1,18 +1,18 @@
 // Consider the code snippet below, how many times does it print "hello"?
 
-/*
+
+
 var foo = "hello";
 function fxn() {
-    console.log(foo); // -> undefined
-    var foo = "bai";
+    console.log(foo);
+    //var foo = "bai";
 }
 
 fxn();
 console.log(foo);
 
-*/
 
-
+/*
 var a = 1;
 function b() {
   a = 10;
@@ -21,3 +21,4 @@ function b() {
 }
 b();
 console.log(a);
+*/

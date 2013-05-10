@@ -10,17 +10,19 @@
  
 $('#do').on('click', function(){
  
+  $('#status').text('calculating....')
+
   // without set timeout, user will never see "calculating...."
-  long()
+  //long()
   
   // with set timeout, works as expected
-  //setTimeout(long,0)
+  setTimeout(long,0)
  
  })
  
- function setStatus() {
-    $('#status').text('calculating....')
- }
+ 
+ 
+ 
  
  
 function long(){
