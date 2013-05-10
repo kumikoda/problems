@@ -1,24 +1,28 @@
+ 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-
-<button id='do'> Do something!</button>
+ 
+<button id='do'> Do long calc!</button>
 <div id='status'></div>
 <div id='result'></div>
-
+ 
 <script>
-
- $('#do').on('click', function(){
-  var result = 1;
-
-  $('#status').text('calculating....')
-
-  setTimeout(long, 20)
+ 
+ 
+$('#do').on('click', function(){
+ 
+  // without set timeout, user will never see "calculating...."
+  long()
   
-  $('#status').text('calclation done')
-
+  // with set timeout, works as expected
+  //setTimeout(long,0)
+ 
  })
  
+ function setStatus() {
+    $('#status').text('calculating....')
+ }
  
-
+ 
 function long(){
   var result = 0
   for (var i = 0; i<1000; i++){
@@ -28,7 +32,9 @@ function long(){
       }
     } 
   }
-  console.log(result);
-}
+  $('#status').text('calclation done') // has to be in here for this example. or else it will ALWAYS run instantly. This is the same as passing it a callback 
 
+  console.log(result)
+}
+ 
 </script>
