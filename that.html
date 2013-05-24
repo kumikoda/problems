@@ -1,0 +1,30 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<button id="nameButton">Say Name</button>
+
+<script>
+
+$(document).ready(function(){
+  anson = new Cat('anson')
+  $('#nameButton').click(function(){
+    anson.sayName()
+  })
+})
+
+
+var Cat = function(name) {
+  this.name = name
+}
+
+Cat.prototype.sayName = function(){
+  var that = this
+  setInterval(function(){
+    console.log(that.name)
+  },1000)
+}
+
+
+
+
+
+
+</script>
