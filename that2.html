@@ -8,16 +8,18 @@ var Cat = function(name) {
 }
 
 Cat.prototype.sayName = function(){
-  var that = this
-  setInterval(function(){
-    console.log(that.name)
-  },1000)
+    console.log(this.name)
 }
 
 Cat.prototype.bindToButton = function() {
-  $('#nameButton').on('click',function(){
-    this.sayName()
+  var that = this;
+  console.log(this);
+  console.log (that);
+  $('#nameButton').on('click',function(e){
+    console.log(e);
+    that.sayName()
   })
+  console.log(this);
 }
 
 
